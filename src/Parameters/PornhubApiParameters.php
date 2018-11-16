@@ -25,8 +25,8 @@ class PornhubApiParameters
     const _PARAM_CATEGORY_DEFAULT = '';
     const _PARAM_SEARCH_DEFAULT = '';
 
-    const _PARAM_ORDERING_DEFAULT = self::_PARAM_ORDERING_NEWEST;
-    const _PARAM_PERIOD_DEFAULT = self::_PARAM_PERIOD_ALLTIME;
+    const _PARAM_ORDERING_DEFAULT = self::_PARAM_ORDERING_MOSTVIEWED;
+    const _PARAM_PERIOD_DEFAULT = self::_PARAM_PERIOD_WEEKLY;
     const _PARAM_THUMBSIZE_DEFAULT = self::_PARAM_THUMBSIZE_LARGEHD;
 
     public static function getOrderingParams()

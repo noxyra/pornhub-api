@@ -105,7 +105,8 @@ class PornhubApi
         $s = '';
         foreach ($params as $key => $value) {
             $s .= ($i === 0) ? '?' : '&';
-            $s .= $key . '=' . $value;
+            $s .= $key . '=';
+            $s .= (is_array($value)) ? implode(',', $value) : $value;
             $i++;
         }
 
