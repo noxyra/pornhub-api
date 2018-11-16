@@ -2,7 +2,9 @@
 
 namespace Noxyra\PornhubApi\Api;
 
-use Noxyra\Parameters\PornhubApiParameters;
+
+
+use Noxyra\PornhubApi\Parameters\PornhubApiParameters;
 
 class PornhubApi
 {
