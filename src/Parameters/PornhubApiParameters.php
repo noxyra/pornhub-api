@@ -1,6 +1,6 @@
 <?php
 
-namespace Noxyra\Parameters;
+namespace Noxyra\PornhubApi\Parameters;
 
 class PornhubApiParameters
 {
