@@ -1,0 +1,21 @@
+{
+    "name": "noxyra/pornhub-api",
+    "description": "Client to get Videos from pornhub API",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Noxyra",
+            "email": "noxyra@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Noxyra\\PornhubApi\\": "src/"
+        }
+    }
+}
