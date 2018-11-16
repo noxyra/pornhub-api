@@ -33,44 +33,55 @@ class PornhubApi
         ]);
     }
 
-    public function getVideoById()
+    public function getVideoById(string $originalId, string $thumbsize = PornhubApiParameters::_PARAM_THUMBSIZE_DEFAULT)
     {
-
+        return $this->getResults('video_by_id', [
+            'id' => $originalId,
+            'thumbsize' => $thumbsize
+        ]);
     }
 
-    public function getVideoEmbedCode()
+    public function getVideoEmbedCode(string $originalId)
     {
-
+        return $this->getResults('video_embed_code', [
+            'id' => $originalId
+        ]);
     }
 
-    public function getDeletedVideos()
+    public function getDeletedVideos(int $page)
     {
-
+        return $this->getResults('deleted_videos', [
+            'page' => $page,
+        ]);
     }
 
-    public function isVideoActive()
+    public function isVideoActive(string $originalId)
     {
-
+        return $this->getResults('is_video_active', [
+            'id' => $originalId,
+        ]);
     }
 
     public function getCategoriesList()
     {
-
+        return $this->getResults('categories');
     }
 
-    public function getTagsList()
+    public function getTagsList(string $firstChar = '0')
     {
-
+        return $this->getResults('tags', [
+            'list' => $firstChar
+        ]);
     }
 
     public function getStarList()
     {
-
+        return $this->getResults('stars');
     }
 
     public function getStarDetailedList()
     {
-
+        return $this->getResults('stars_detailed');
     }
 
     // -- PRIVATE --
@@ -82,7 +93,7 @@ class PornhubApi
      */
     private function getResults($method = '', $params = [])
     {
-        return json_decode(file_get_contents(self::ENDPOINT . $method  ));
+        return json_decode(file_get_contents(self::ENDPOINT . $method . $this->buildGetParams($params)));
     }
 
     /**
