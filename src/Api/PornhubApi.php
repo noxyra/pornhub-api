@@ -22,12 +22,12 @@ class PornhubApi
     )
     {
         return $this->getResults('search', [
-            'category' => $catagory,
-            'page' => $page,
-            'search' => $search,
-            'ordering' => $ordering,
-            'period' => $period,
-            'thumbsize' => $thumbsize,
+            'category' => urlencode($catagory),
+            'page' => urlencode($page),
+            'search' => urlencode($search),
+            'ordering' => urlencode($ordering),
+            'period' => urlencode($period),
+            'thumbsize' => urlencode($thumbsize),
             'stars' => $stars,
             'tags' => $tags
         ]);
